@@ -9,16 +9,16 @@ The AI agent only gets the context you are appending to the PRP and training dat
 ## Research Process
 
 1. **Phase Context Analysis**
-   - Read PRP-PLANNING/PRPs/INITIAL_PHASE[N].md to determine phase number and complexity
-   - Read PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md to get template assignment and project context
-   - Read previous PRP-PLANNING/PRPs/PHASE[N-1]_COMPLETION_SUMMARY.md files (if any) for integration context
+   - Read ../PRP-PLANNING/PRPs/INITIAL_PHASE[N].md to determine phase number and complexity
+   - Read ../PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md to get template assignment and project context
+   - Read previous ../PRP-PLANNING/PRPs/PHASE[N-1]_COMPLETION_SUMMARY.md files (if any) for integration context
    - Analyze phase type (foundation/integration/optimization) for appropriate patterns
 
 2. **Template Selection**
    - Extract template assignment from PROJECT_PHASE_PLAN.md for this phase
-   - If no template specified, use PRP-FRAMEWORK/templates/prp/prp_base.md (enhanced version)
-   - Validate template exists in PRP-FRAMEWORK/templates/ directory using full path PRP-FRAMEWORK/templates/prp/[template_name].md or PRP-FRAMEWORK/templates/planning/[template_name].md
-   - If template not found, error with message: "Template not found at PRP-FRAMEWORK/templates/prp/[template_name].md"
+   - If no template specified, use templates/prp/prp_base.md (enhanced version)
+   - Validate template exists in templates/ directory using full path templates/prp/[template_name].md or templates/planning/[template_name].md
+   - If template not found, error with message: "Template not found at templates/prp/[template_name].md"
    - Note phase type and complexity for template population
 
 3. **Codebase Analysis**
@@ -113,14 +113,14 @@ python scripts/document_performance_baselines.py --phase=[N]
 
 1. **FIRST**: Read INITIAL_PHASE[N].md to understand what phase this is
 2. **SECOND**: Read PROJECT_PHASE_PLAN.md to get template assignment and project context  
-3. **THIRD**: Read previous PHASE[N-1]_COMPLETION_SUMMARY.md files for integration context
+3. **THIRD**: Read previous PHASE*_COMPLETION_SUMMARY.md files for integration context
 4. **FOURTH**: Research codebase patterns and external documentation
 5. **FIFTH**: ULTRATHINK about the PRP - consider phase type, complexity, integration requirements
 6. **SIXTH**: Populate the assigned template with comprehensive context
 7. **FINAL**: Include phase-appropriate validation loops
 
 ## Output
-Save as: `PRP-PLANNING/PRPs/{generated-prp-name}.md`
+Save as: `../PRP-PLANNING/PRPs/{generated-prp-name}.md`
 
 ## Quality Checklist
 - [ ] All necessary context included

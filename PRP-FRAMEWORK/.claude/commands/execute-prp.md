@@ -9,10 +9,10 @@ Implement a feature using using the PRP file.
 1. **Setup Project Context**
    - **Load PRP**: Read the specified PRP file and understand all context and requirements
    - **Setup CLAUDE Files**: Copy CLAUDE development guidelines from PRP-PLANNING/PLANNING/ to proper locations for Claude Code auto-discovery
-     - Copy `PRP-PLANNING/PLANNING/CLAUDE_PROJECT.md` → `src/CLAUDE.md` (main source directory) 
-     - Copy `PRP-PLANNING/PLANNING/CLAUDE_BACKEND.md` → `src/backend/CLAUDE.md` (if backend/ directory exists)
-     - Copy `PRP-PLANNING/PLANNING/CLAUDE_FRONTEND.md` → `src/frontend/CLAUDE.md` (if frontend/ directory exists)
-     - Copy `PRP-PLANNING/PLANNING/CLAUDE_SHARED.md` → `src/shared/CLAUDE.md` (if shared/ directory exists)
+     - Copy `../PRP-PLANNING/PLANNING/CLAUDE_PROJECT.md` → `../src/CLAUDE.md` (main source directory) 
+     - Copy `../PRP-PLANNING/PLANNING/CLAUDE_BACKEND.md` → `../src/backend/CLAUDE.md` (if backend/ directory exists)
+     - Copy `../PRP-PLANNING/PLANNING/CLAUDE_FRONTEND.md` → `../src/frontend/CLAUDE.md` (if frontend/ directory exists)
+     - Copy `../PRP-PLANNING/PLANNING/CLAUDE_SHARED.md` → `../src/shared/CLAUDE.md` (if shared/ directory exists)
    - **Validate Context**: Follow all instructions in the PRP and extend research if needed
    - **Complete Context**: Ensure you have all needed context to implement the PRP fully
    - **Additional Research**: Do more web searches and codebase exploration as needed

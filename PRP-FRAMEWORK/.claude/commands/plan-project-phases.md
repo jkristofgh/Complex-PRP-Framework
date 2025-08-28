@@ -24,10 +24,10 @@ This command transforms ad hoc phase planning into a systematic, data-driven pro
 Before executing this command, validate that:
 - [ ] BRD document exists and is readable
 - [ ] Architecture document exists and is readable
-- [ ] PRP-FRAMEWORK/templates/prp/TEMPLATE_INITIAL_PHASE.md exists
-- [ ] PRP-FRAMEWORK/templates/planning/PROJECT_PHASE_PLAN.md exists
-- [ ] PRP-FRAMEWORK/templates/planning/PHASE_DEPENDENCY_MAP.md exists
-- [ ] Write permissions to PRP-PLANNING/PRPs/ directory for file generation
+- [ ] templates/prp/TEMPLATE_INITIAL_PHASE.md exists
+- [ ] templates/planning/PROJECT_PHASE_PLAN.md exists
+- [ ] templates/planning/PHASE_DEPENDENCY_MAP.md exists
+- [ ] Write permissions to PRPs/ directory for file generation
 
 ## Analysis Process
 
@@ -158,7 +158,7 @@ Phase N APIs for Phase N+1:
 ```bash
 # Generate INITIAL_PHASE[N].md files for each planned phase
 For each phase 1 through N:
-- Copy PRP-FRAMEWORK/templates/prp/TEMPLATE_INITIAL_PHASE.md to PRP-PLANNING/PRPs/INITIAL_PHASE[N].md
+- Copy templates/prp/TEMPLATE_INITIAL_PHASE.md to ../PRP-PLANNING/PRPs/INITIAL_PHASE[N].md
 - Populate phase-specific information
 - Add dependencies from previous phases
 - Define integration requirements for next phases

@@ -111,7 +111,7 @@ Generate a comprehensive Phase Completion Summary for the specified phase in the
 #### Copy and Customize Template
 ```bash
 # Create phase-specific completion summary
-cp PRP-FRAMEWORK/templates/prp/TEMPLATE_PHASE_COMPLETION.md PRP-PLANNING/PRPs/PHASE[N]_COMPLETION_SUMMARY.md
+cp templates/prp/TEMPLATE_PHASE_COMPLETION.md ../PRP-PLANNING/PRPs/PHASE{N}_COMPLETION_SUMMARY.md
 ```
 
 #### Fill Template Sections with Real Data
@@ -196,7 +196,7 @@ cp PRP-FRAMEWORK/templates/prp/TEMPLATE_PHASE_COMPLETION.md PRP-PLANNING/PRPs/PH
 - Document performance characteristics that must be maintained
 
 ## Output Files
-- **Primary Output**: `PRP-PLANNING/PRPs/PHASE[N]_COMPLETION_SUMMARY.md`
+- **Primary Output**: `PRPs/PHASE{N}_COMPLETION_SUMMARY.md`
 - **Validation Report**: Include summary of quality checks performed
 - **Integration Guide**: Embedded within completion summary for next phase use
 

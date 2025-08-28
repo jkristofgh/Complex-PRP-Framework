@@ -20,46 +20,46 @@ The Complex Multi-Phase Product Requirements Prompt (PRP) framework transforms l
 ### Prerequisites
 - [Claude Code](https://claude.ai/code) installed and configured
 - Git for version control
-- Your project's Business Requirements Document (BRD)
-- Your project's Architecture Document
 
-### 1. Set Up Your Project
+### 1. Clone and Setup Internal Three-Directory Structure
 
 ```bash
-# Clone the framework
+# Clone the framework repository
 git clone <your-complex-prp-framework-repo>
 cd Complex-PRP-Framework
 
-# Use the project generator to create a new project
-python tools/project-generator.py --name YourProject --type web-application
+# Create your project planning documents (from PRP-FRAMEWORK)
+cd PRP-FRAMEWORK
+cp templates/project/TEMPLATE_BRD.md ../PRP-PLANNING/PLANNING/BRD_YourProject.md
+cp templates/project/TEMPLATE_ARCHITECTURE.md ../PRP-PLANNING/PLANNING/Architecture_YourProject.md
+cp templates/project/TEMPLATE_CLAUDE_*.md ../PRP-PLANNING/PLANNING/
+
+# Edit these files with your actual project requirements
 ```
 
-### 2. Systematic Phase Planning (Recommended)
+### 2. Generate Your Phase Plan
 
 ```bash
-# Navigate to your project directory
-cd ../YourProject
-
-# Generate optimal phase plan from your documents
-/plan-project-phases PLANNING/BRD_YourProject.md PLANNING/Architecture_YourProject.md
+# Run systematic phase planning from your documents (run from PRP-FRAMEWORK directory)
+/plan-project-phases ../PRP-PLANNING/PLANNING/BRD_YourProject.md ../PRP-PLANNING/PLANNING/Architecture_YourProject.md
 
 # This creates:
-# ✅ PROJECT_PHASE_PLAN.md - Master phase plan with timeline
-# ✅ PHASE_DEPENDENCY_MAP.md - Visual dependency analysis  
-# ✅ INITIAL_PHASE1.md, INITIAL_PHASE2.md, etc. - All phase files
+# ✅ ../PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md - Master phase plan with timeline
+# ✅ ../PRP-PLANNING/PRPs/PHASE_DEPENDENCY_MAP.md - Visual dependency analysis  
+# ✅ ../PRP-PLANNING/PRPs/INITIAL_PHASE1.md, INITIAL_PHASE2.md, etc. - All phase files
 # ✅ Optimal sequencing based on requirements analysis
 ```
 
 ### 3. Execute Development Phases
 
 ```bash
-# For each phase (1, 2, 3, ...):
+# For each phase (1, 2, 3, ...) - run from PRP-FRAMEWORK directory:
 
 # Generate comprehensive implementation PRP
-/generate-prp INITIAL_PHASE[N].md
+/generate-prp ../PRP-PLANNING/PRPs/INITIAL_PHASE[N].md
 
-# Execute the phase implementation
-/execute-prp PRPs/[generated-prp-file].md
+# Execute the phase implementation (creates code in ../src/)
+/execute-prp ../PRP-PLANNING/PRPs/[generated-prp-file].md
 
 # Document what was actually built (automated analysis)
 /update-phase-completion [N]
@@ -69,6 +69,8 @@ cd ../YourProject
 
 # Repeat for next phase...
 ```
+
+**📖 See [QUICK_START.md](PRP-FRAMEWORK/QUICK_START.md) for a complete setup guide!**
 
 ## 📋 Framework Components
 
@@ -92,30 +94,43 @@ cd ../YourProject
 - **IoT Platforms**: Device management and data processing systems
 - **Microservices**: Distributed system architectures
 
-## 🏗️ Framework Architecture
+## 🏗️ Internal Three-Directory Architecture
+
+The framework uses a clean internal three-directory structure within the main repository:
 
 ```
-Complex-PRP-Framework/
-├── templates/                    # Core framework templates
-│   ├── project/                 # Project structure templates
-│   ├── prp/                     # PRP generation templates
-│   └── planning/                # Planning and tracking templates
-├── examples/                     # Complete project examples
-│   ├── trading-platform/        # Real-time trading system
-│   ├── saas-application/        # Multi-tenant SaaS
-│   └── ecommerce-system/        # E-commerce platform
-├── use-cases/                   # Specialized framework variations
-│   ├── pydantic-ai/            # AI agent development
-│   ├── mcp-server/             # MCP server development  
-│   └── web-application/        # Standard web apps
-├── tools/                       # Framework utilities
-│   ├── project-generator.py    # New project scaffolding
-│   ├── template-validator.py   # Template integrity checker
-│   └── migration-assistant.py  # Existing project migration
-└── docs/                        # Comprehensive documentation
-    ├── getting-started.md       # Quick start guide
-    ├── systematic-planning.md   # Planning methodology
-    └── best-practices.md        # Framework best practices
+Complex-PRP-Framework/                    # Main repository
+├── PRP-FRAMEWORK/                        # Pure framework code  
+│   ├── .claude/                         # Claude Code commands
+│   ├── templates/                       # Core framework templates
+│   │   ├── project/                     # Project structure templates
+│   │   ├── prp/                         # PRP generation templates
+│   │   └── planning/                    # Planning and tracking templates
+│   ├── examples/                        # Complete project examples
+│   ├── use-cases/                       # Specialized framework variations
+│   ├── tools/                           # Framework utilities
+│   └── docs/                            # Framework documentation
+├── PRP-PLANNING/                         # Your project management
+│   ├── PLANNING/                        # Your project documents
+│   │   ├── BRD_YourProject.md          # Business requirements
+│   │   ├── Architecture_YourProject.md  # Technical architecture
+│   │   └── CLAUDE_*.md                  # Claude Code guidelines
+│   ├── PRPs/                            # Generated planning files
+│   │   ├── PROJECT_PHASE_PLAN.md        # Master phase plan
+│   │   └── INITIAL_PHASE[N].md          # Individual phase files
+│   └── TASK.md                          # Project task tracking
+├── src/                                  # Your actual source code
+│   ├── CLAUDE.md                        # Main project guidance (auto-copied)
+│   ├── backend/                         # Server-side implementation
+│   │   └── CLAUDE.md                    # Backend guidance (auto-copied)
+│   ├── frontend/                        # Client-side implementation
+│   │   └── CLAUDE.md                    # Frontend guidance (auto-copied)
+│   ├── shared/                          # Common utilities
+│   │   └── CLAUDE.md                    # Shared code guidance (auto-copied)
+│   └── tests/                           # Test suites
+├── README.md                            # This file
+├── PRP-FRAMEWORK/FRAMEWORK_GUIDE.md     # Complete methodology
+└── LICENSE                              # License file
 ```
 
 ## 🎯 When to Use Complex PRP Framework
