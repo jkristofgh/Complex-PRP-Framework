@@ -41,7 +41,7 @@ Example: "[Project Name] is a [type of system] designed to [primary purpose] wit
 
 **Full Architecture Scope:** [Describe the complete architectural vision]
 - [List components and technologies in full implementation]
-- [Complexity analysis and resource requirements]
+- [Complexity analysis and system requirements]
 
 **Simplified Architecture Option:** [Describe a lighter-weight approach]
 - [How simplified approach still meets all critical requirements]  
@@ -73,7 +73,7 @@ External API → Core Service → Database → [Output Channels]
 - [Key benefit 3 - meeting performance requirements]
 - [Key benefit 4 - development velocity]
 
-**Resource Requirements:**
+**System Requirements:**
 - CPU: [Minimum requirements]
 - RAM: [Memory needs]
 - Storage: [Disk space needs]
@@ -96,8 +96,8 @@ External API → Core Service → Database → [Output Channels]
 - [Operational benefits for large teams]
 - [Performance benefits under high load]
 
-**Resource Requirements:**
-- [Higher resource needs and complexity]
+**System Requirements:**
+- [Higher system needs and complexity]
 - [Infrastructure and operational requirements]
 
 ## Technology Stack Deep Dive
@@ -183,9 +183,9 @@ External API → Core Service → Database → [Output Channels]
 
 [Identify the main security concerns and how architecture addresses them.]
 
-1. **[Security Risk 1]**: [Mitigation approach in architecture]
-2. **[Security Risk 2]**: [Mitigation approach in architecture]
-3. **[Security Risk 3]**: [Mitigation approach in architecture]
+1. **[Security Concern 1]**: [Architecture approach]
+2. **[Security Concern 2]**: [Architecture approach]
+3. **[Security Concern 3]**: [Architecture approach]
 
 ### Authentication & Authorization
 
@@ -271,7 +271,7 @@ External API → Core Service → Database → [Output Channels]
 
 [Describe the deployment approach and rationale]
 
-**Resource Requirements:**
+**System Requirements:**
 - Infrastructure: [Server or cloud requirements]
 - Networking: [Connectivity and security requirements]
 - Storage: [Data storage and backup requirements]
@@ -342,7 +342,7 @@ External API → Core Service → Database → [Output Channels]
 
 **Technical Metrics:**
 - [System performance and health metrics]
-- [Resource utilization and capacity metrics]
+- [System utilization and capacity metrics]
 - [Error rates and availability metrics]
 
 ### Logging Strategy
@@ -384,31 +384,6 @@ External API → Core Service → Database → [Output Channels]
 - [Automated test execution and reporting]
 - [Deployment automation and rollback strategies]
 
-## Risk Assessment & Mitigation
-
-### Technical Risks
-
-1. **[Technical Risk 1]**: 
-   - **Likelihood**: [High/Medium/Low]
-   - **Impact**: [High/Medium/Low]
-   - **Mitigation**: [Specific mitigation strategy]
-
-2. **[Technical Risk 2]**:
-   - **Likelihood**: [High/Medium/Low]
-   - **Impact**: [High/Medium/Low]
-   - **Mitigation**: [Specific mitigation strategy]
-
-### Business & Operational Risks
-
-1. **[Business Risk 1]**: [Risk description and mitigation]
-2. **[Business Risk 2]**: [Risk description and mitigation]
-
-### Dependency Risks
-
-**External Dependencies:**
-- [Critical external service dependencies and fallback plans]
-- [Third-party library risks and alternatives]
-- [Infrastructure dependencies and backup options]
 
 ## Future Architecture Evolution
 
@@ -584,7 +559,6 @@ Ensure this document includes:
 - **Performance Requirements**: Specific and measurable targets for baseline establishment
 - **Integration Points**: Detailed interface definitions for phase boundary planning
 - **Technology Rationale**: Decision justification for template population and complexity assessment
-- **Risk Assessment**: Specific technical mitigation strategies for phase planning
 
 #### CLAUDE File Management
 During the `/execute-prp` command, CLAUDE development guidelines are automatically distributed:

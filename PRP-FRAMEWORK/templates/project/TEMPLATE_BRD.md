@@ -278,31 +278,6 @@ Example: "A [type of application] that [main functionality] for [target users] t
 
 ---
 
-## Risk Assessment
-
-### Technical Risks
-
-* [Primary technical risk] - [likelihood and impact assessment]
-* [Integration risk] - [external dependency risks]
-* [Performance risk] - [scalability or latency concerns]
-
-### Business Risks
-
-* [Market risk] - [user adoption or competitive concerns]
-* [Resource risk] - [team capacity or skill concerns]
-* [Strategic risk] - [alignment with business strategy]
-
-### Mitigation Strategies
-
-* [For each major risk, describe the mitigation approach]
-* [Backup plans for critical dependencies]
-* [Monitoring and early warning systems needed]
-
----
-
-## Project Team & Resources
-
-**Team Size:** [number of people and roles needed]
 
 ### Suggested Phase Breakdown
 
@@ -347,7 +322,6 @@ Example: "A [type of application] that [main functionality] for [target users] t
 
 * [Other projects or teams this depends on]
 * [Existing systems that must remain operational]
-* [Internal resources or capabilities required]
 
 ### Key Assumptions
 

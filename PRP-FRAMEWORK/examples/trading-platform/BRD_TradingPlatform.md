@@ -180,21 +180,13 @@ On a volatile open, the trader starts the app on LAB. The dashboard shows ES, NQ
 
 * Single-user, now; services stateless and message-queue-ready for future horizontal scaling. Target sub‑second evaluation for typical watchlist sizes.
 
-### Potential Challenges
-
-* Schwab API quota or rate-limiting, LAB resource constraints, provider outage handling, and credential security.
-
-* External dependency on GCSM availability and LAB outbound connectivity; mitigation: startup health check with exponential backoff and clear degraded-mode banner. Cost and limits for secret access/read quotas. Clear runbook for lost service account key.
-
-* Manage cases where rotation is disabled: ensure expired/revoked credentials surface clear errors and recovery flow (re-auth, replace secret).
 
 ---
 
 ## Milestones & Sequencing
 
-**Team:** 1–2 people (Product/Design + Full-stack Engineer)
 
-**Full Release Target:** 2–4 weeks (MVP R1, single-user)
+**Release Scope:** MVP R1, single-user
 
 ### Suggested Phases
 

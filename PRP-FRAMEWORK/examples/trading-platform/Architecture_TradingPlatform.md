@@ -51,7 +51,7 @@ Schwab API → FastAPI App → SQLite → [In-App, Sound, Slack] Notifications
 - Meets all sub-second latency requirements
 - Easy to backup (copy one file)
 
-**Resource Requirements:**
+**System Requirements:**
 - CPU: 2+ cores
 - RAM: 2GB
 - Storage: 10GB
@@ -216,7 +216,7 @@ Schwab API → FastAPI App → SQLite → [In-App, Sound, Slack] Notifications
 - Service dependencies and networking configuration
 - Container images for API, UI, and database services
 
-**Resource Requirements:**
+**System Requirements:**
 - CPU: 4+ cores (data ingestion + alert processing)
 - RAM: 8GB+ (time-series data caching)
 - Storage: 100GB+ SSD (historical data retention)
@@ -308,11 +308,6 @@ Background Aggregation → Retention Policy Enforcement
 
 ## Security Architecture
 
-### Threat Model & Mitigations
-1. **API Key Exposure:** GCSM encryption + local memory-only caching
-2. **Network Interception:** TLS 1.3 for all external communications
-3. **Local Access:** Localhost-only binding, no external exposure
-4. **Data Integrity:** Input validation, SQL injection prevention
 
 ### Credential Rotation Strategy
 **Manual Rotation (Release 1):**
@@ -385,18 +380,6 @@ Background Aggregation → Retention Policy Enforcement
 - API rate limiting per tenant
 - Billing/subscription hooks
 
-## Risk Assessment & Mitigation
-
-### Technical Risks
-1. **Schwab API Changes:** API versioning strategy, adapter pattern
-2. **Performance Degradation:** Continuous monitoring, alert thresholds
-3. **Data Loss:** Regular backups, point-in-time recovery
-4. **Security Vulnerabilities:** Regular dependency updates, security audits
-
-### Business Risks
-1. **Regulatory Changes:** Flexible compliance framework design
-2. **Market Structure Changes:** Modular instrument support
-3. **Scalability Limits:** Horizontal scaling preparation
 
 ## Additional Considerations
 
@@ -439,7 +422,7 @@ Background Aggregation → Retention Policy Enforcement
 
 ## Phase Implementation Mapping
 
-### Phase 1: Core MVP (Weeks 1-2)
+### Phase 1: Core MVP
 **Architecture Components:**
 - Basic FastAPI service with WebSocket support
 - Redis message queuing setup
@@ -454,7 +437,7 @@ Background Aggregation → Retention Policy Enforcement
 - In-app notifications
 - Health monitoring dashboard
 
-### Phase 2: Production Ready (Weeks 3-4)  
+### Phase 2: Production Ready  
 **Architecture Components:**
 - Google Cloud Secret Manager integration
 - Slack OAuth and notification delivery
@@ -525,4 +508,4 @@ Consider the complex microservices architecture when:
 7. Security hardening and GCSM integration
 8. User acceptance testing with real market data
 
-This architecture supports all BRD requirements while maintaining flexibility for future enhancements and scaling needs. The modular design enables incremental development and testing, reducing risk while ensuring all critical functionality is delivered in Release 1.
+This architecture supports all BRD requirements while maintaining flexibility for future enhancements and scaling needs. The modular design enables incremental development and testing while ensuring all critical functionality is delivered in Release 1.

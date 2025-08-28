@@ -83,13 +83,13 @@ INTEGRATION COMPONENTS (Phase 3):
 
 ### Primary Critical Path
 ```
-[The longest path through the project - determines minimum project duration]
+[The longest path through the project - determines development sequence]
 
 Critical Path: Phase 1 → Phase 2 → Phase 3 → Phase 4
-Duration: [X weeks] + [Y weeks] + [Z weeks] + [W weeks] = [Total weeks]
+Sequence: [Phase 1 scope] → [Phase 2 scope] → [Phase 3 scope] → [Phase 4 scope]
 
 Critical Components:
-Phase 1: [Most time-consuming/risky component]
+Phase 1: [Most time-consuming component]
   ↓ [Specific dependency]
 Phase 2: [Component that depends on Phase 1 critical component]
   ↓ [Specific dependency]  
@@ -116,53 +116,6 @@ Phase 2: [Essential UI only] - [Reduced duration]
 Phase 3: [MVP completion] - [Reduced duration]
 ```
 
-## ⚠️ Dependency Risk Analysis
-
-### High-Risk Dependencies
-```
-[Dependencies that pose significant risk to project success]
-
-Risk Level: HIGH 🔴
-Dependency: Phase 2 → Phase 1 (API Integration)
-Risk Factor: Complex API contracts
-Impact: If Phase 1 APIs change, Phase 2 development blocked
-Probability: Medium
-Mitigation: [Specific mitigation strategy]
-
-Risk Level: HIGH 🔴
-Dependency: Phase 3 → Phase 1,2 (Performance Requirements)
-Risk Factor: Performance targets may not be met
-Impact: Entire system performance at risk
-Probability: Low
-Mitigation: [Specific mitigation strategy]
-```
-
-### Medium-Risk Dependencies
-```
-Risk Level: MEDIUM 🟡
-Dependency: Phase 4 → Phase 3 (Integration Patterns)
-Risk Factor: Integration complexity unknown until Phase 3
-Impact: Phase 4 timeline uncertainty
-Probability: Medium
-Mitigation: [Specific mitigation strategy]
-
-Risk Level: MEDIUM 🟡
-Dependency: Phase N → Phase N-1 (Team Availability)
-Risk Factor: Team member availability changes
-Impact: Phase timing disruption
-Probability: High
-Mitigation: [Specific mitigation strategy]
-```
-
-### Low-Risk Dependencies
-```
-Risk Level: LOW 🟢
-Dependency: Documentation → Implementation
-Risk Factor: Documentation can lag implementation
-Impact: Minor delay in project completion
-Probability: Low
-Mitigation: [Specific mitigation strategy]
-```
 
 ## 🔄 Integration Points Detail
 
@@ -226,15 +179,15 @@ Parallel Opportunity 1:
 Components: [Component A] and [Component B]
 Phases: Phase 1 and Phase 1 (parallel)
 Dependencies: Both depend on [common foundation] but not on each other
-Benefit: [Time savings or risk reduction]
-Risk: [Integration complexity when combining]
+Benefit: [Time savings]
+Challenge: [Integration complexity when combining]
 
 Parallel Opportunity 2:
 Components: [Component C] and [Component D]  
 Phases: Phase 2 and Phase 3 (overlap)
 Dependencies: Component D can start before Phase 2 complete
 Benefit: [Timeline compression]
-Risk: [Rework if Phase 2 changes Component C]
+Challenge: [Rework if Phase 2 changes Component C]
 ```
 
 ### Dependency Reduction Opportunities
@@ -262,14 +215,14 @@ Merge Opportunity 1:
 Phases: Phase 3 and Phase 4
 Rationale: [Why these could be combined]
 Benefits: [Reduced integration complexity, faster delivery]
-Risks: [Increased phase complexity, harder debugging]
+Challenges: [Increased phase complexity, harder debugging]
 Recommendation: [Merge/Don't merge with reasoning]
 
 Merge Opportunity 2:
 Phases: Phase 1B and Phase 2A
 Rationale: [Similar technology and skill requirements]
 Benefits: [Team efficiency, reduced context switching]
-Risks: [Larger phase scope, delayed feedback]
+Challenges: [Larger phase scope, delayed feedback]
 Recommendation: [Merge/Don't merge with reasoning]
 ```
 
@@ -312,9 +265,9 @@ Phase 4: [Final business value percentage]
 ### Dependency Statistics
 ```
 Total Dependencies: [Number]
-High-Risk Dependencies: [Number] ([Percentage]%)
-Medium-Risk Dependencies: [Number] ([Percentage]%)
-Low-Risk Dependencies: [Number] ([Percentage]%)
+Complex Dependencies: [Number] ([Percentage]%)
+Moderate Dependencies: [Number] ([Percentage]%)
+Simple Dependencies: [Number] ([Percentage]%)
 
 Average Dependencies per Phase: [Number]
 Most Dependent Phase: Phase [N] with [Number] dependencies
@@ -329,7 +282,7 @@ Alternative Path Options: [Number] viable alternatives
 Dependency Complexity Score: [Score]/10
 - Simple linear dependencies: [Score contribution]
 - Complex multi-way dependencies: [Score contribution]  
-- Circular dependency risks: [Score contribution]
+- Circular dependency complexity: [Score contribution]
 
 Integration Complexity Score: [Score]/10
 - Simple API integrations: [Score contribution]
@@ -376,7 +329,7 @@ Impact Assessment:
 This dependency map should be updated:
 - After each phase completion
 - When significant scope changes occur
-- When new risks or opportunities are identified
+- When new opportunities are identified
 - [Other update triggers]
 ```
 
