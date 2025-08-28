@@ -2,7 +2,7 @@
 
 ## Phase Number: $ARGUMENTS
 
-Generate a comprehensive Phase Completion Summary for the specified phase in the Complex Multi-Phase PRP workflow. This command automates Step N.5 from the Complex PRP User Guide by analyzing the current codebase and creating detailed documentation of what was actually implemented.
+Generate a comprehensive Phase Completion Summary for the specified phase in the Complex Multi-Phase PRP workflow. This command automates Step N.5 from the Complex PRP User Guide by analyzing the current codebase and creating detailed documentation of what was actually implemented. Additionally, it automatically updates PROJECT_PHASE_PLAN.md with progress tracking, marking completed deliverables and achieved success criteria.
 
 ## Usage Examples
 ```bash
@@ -17,6 +17,7 @@ Generate a comprehensive Phase Completion Summary for the specified phase in the
 - Validate that phase number is provided and is a positive integer
 - Check if this is Phase 1 (foundation) or subsequent phase
 - Verify that previous phase completion summary exists (for phases > 1)
+- Ensure ../PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md exists and is writable for progress tracking
 
 ### 2. Codebase Analysis & Documentation Extraction
 
@@ -111,7 +112,7 @@ Generate a comprehensive Phase Completion Summary for the specified phase in the
 #### Copy and Customize Template
 ```bash
 # Create phase-specific completion summary
-cp PRP-FRAMEWORK/templates/prp/TEMPLATE_PHASE_COMPLETION.md PRP-PLANNING/PRPs/PHASE[N]_COMPLETION_SUMMARY.md
+cp templates/prp/TEMPLATE_PHASE_COMPLETION.md ../PRP-PLANNING/PRPs/PHASE{N}_COMPLETION_SUMMARY.md
 ```
 
 #### Fill Template Sections with Real Data
@@ -196,9 +197,79 @@ cp PRP-FRAMEWORK/templates/prp/TEMPLATE_PHASE_COMPLETION.md PRP-PLANNING/PRPs/PH
 - Document performance characteristics that must be maintained
 
 ## Output Files
-- **Primary Output**: `PRP-PLANNING/PRPs/PHASE[N]_COMPLETION_SUMMARY.md`
+- **Primary Output**: `PRPs/PHASE{N}_COMPLETION_SUMMARY.md`
+- **Updated PROJECT_PHASE_PLAN.md**: Automatically updated with completed deliverables and success criteria checkboxes
 - **Validation Report**: Include summary of quality checks performed
 - **Integration Guide**: Embedded within completion summary for next phase use
+
+## Project Progress Tracking Update
+
+After creating the completion summary, automatically update PROJECT_PHASE_PLAN.md with progress tracking:
+
+### 1. Update Phase Deliverables Status
+```bash
+# Mark Phase N deliverables as completed in PROJECT_PHASE_PLAN.md
+- Read ../PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md
+- Find "### Phase [N] Deliverables" section
+- Update checkboxes from `[ ]` to `[x]` for completed deliverables:
+  - [x] PHASE[N]_REQUIREMENTS.md (generated)
+  - [x] [Generated Phase N PRP file]
+  - [x] [Phase N implementation code]
+  - [x] PHASE[N]_COMPLETION_SUMMARY.md
+  - [x] [Updated phase plans based on Phase N learnings]
+```
+
+### 2. Update Phase Success Criteria Status
+```bash
+# Mark Phase N success criteria as achieved in PROJECT_PHASE_PLAN.md
+- Find "### Phase [N] Success Criteria" section
+- Update checkboxes from `[ ]` to `[x]` for achieved criteria based on:
+  - Functional criteria: Validate against implemented components
+  - Technical criteria: Validate against measured performance and reliability
+  - Business criteria: Validate against delivered business value
+```
+
+### 3. Deliverable Detection Logic
+```bash
+# Determine which deliverables are complete based on codebase analysis:
+Phase Requirements File: Check if PHASE[N]_REQUIREMENTS.md exists
+Generated PRP File: Check if PRP file for this phase was created
+Implementation Code: Validate that actual code components exist (not empty files)
+Completion Summary: Always mark complete (since this command creates it)
+Updated Phase Plans: Check if future phase files have been updated
+```
+
+### 4. Success Criteria Validation Logic
+```bash
+# Determine which success criteria are achieved based on analysis:
+Functional Criteria: Check implemented components against requirements
+- API endpoints implemented and functional
+- Database tables created with proper schema
+- Core business logic components exist and tested
+
+Technical Criteria: Check measured performance against targets
+- Performance benchmarks met (validate against test outputs)
+- Reliability targets achieved (validate error handling)
+- Integration points working (validate with completion summary data)
+
+Business Criteria: Check delivered value against business objectives
+- User workflows functional (validate end-to-end paths)
+- Business objectives supported (validate feature completeness)
+```
+
+### 5. PROJECT_PHASE_PLAN.md Update Process
+```bash
+# Update the master project plan file:
+1. Read current PROJECT_PHASE_PLAN.md content
+2. Locate Phase [N] deliverables section
+3. Update relevant checkboxes from `[ ]` to `[x]`
+4. Locate Phase [N] success criteria section
+5. Update achieved criteria checkboxes from `[ ]` to `[x]`
+6. Write updated content back to PROJECT_PHASE_PLAN.md
+7. Validate that updates were applied correctly
+```
+
+**Note**: This creates a living project dashboard where PROJECT_PHASE_PLAN.md automatically reflects actual completion status based on real implementation analysis.
 
 ## Quality Checklist
 - [ ] All template sections populated with real, verified data

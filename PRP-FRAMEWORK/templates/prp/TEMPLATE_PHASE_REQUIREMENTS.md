@@ -1,4 +1,4 @@
-# TEMPLATE: Multi-Phase Project INITIAL File
+# TEMPLATE: Multi-Phase Project Phase Requirements
 
 ## 📋 Phase Information
 - **Phase Number**: [X]

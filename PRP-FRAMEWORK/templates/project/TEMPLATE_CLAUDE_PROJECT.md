@@ -90,14 +90,14 @@ Use Complex PRP for projects with:
 # This generates:
 # - PROJECT_PHASE_PLAN.md (master phase plan)
 # - PHASE_DEPENDENCY_MAP.md (visual dependencies)  
-# - INITIAL_PHASE1.md, INITIAL_PHASE2.md, etc. (all phase files)
+# - PHASE1_REQUIREMENTS.md, PHASE2_REQUIREMENTS.md, etc. (all phase files)
 # - Optimal phase sequencing based on complexity analysis
 ```
 
 #### Phase Development Cycle (Repeat for Each Phase)
 ```bash
 # 1. Generate comprehensive implementation PRP
-/generate-prp INITIAL_PHASE[N].md
+/generate-prp PHASE[N]_REQUIREMENTS.md
 
 # 2. Execute the phase implementation
 /execute-prp PRPs/[generated-phase-prp].md

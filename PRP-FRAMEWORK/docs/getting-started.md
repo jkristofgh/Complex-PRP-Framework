@@ -138,16 +138,16 @@ Once your BRD and Architecture documents are ready:
 ```
 
 This command will analyze your documents and create:
-- **PROJECT_PHASE_PLAN.md** - Master project phase plan with timeline
+- **PROJECT_PHASE_PLAN.md** - Master project phase plan with dependencies
 - **PHASE_DEPENDENCY_MAP.md** - Visual dependency analysis
-- **INITIAL_PHASE1.md, INITIAL_PHASE2.md, etc.** - Individual phase files
+- **PHASE1_REQUIREMENTS.md, PHASE2_REQUIREMENTS.md, etc.** - Individual phase files
 - Optimal phase sequencing based on complexity analysis
 
 ### Review Generated Phase Plan
 
 1. **Check PROJECT_PHASE_PLAN.md** for the overall strategy
 2. **Review PHASE_DEPENDENCY_MAP.md** for dependency relationships
-3. **Examine each INITIAL_PHASE[N].md** file for phase-specific details
+3. **Examine each PHASE[N]_REQUIREMENTS.md** file for phase-specific details
 4. **Customize if needed** - you can edit the generated files before execution
 
 ## Step 5: Execute Your First Phase
@@ -156,7 +156,7 @@ This command will analyze your documents and create:
 
 ```bash
 # Generate comprehensive implementation PRP for Phase 1
-/generate-prp INITIAL_PHASE1.md
+/generate-prp PHASE1_REQUIREMENTS.md
 ```
 
 This creates a detailed PRP file in the `PRPs/` directory with:
@@ -201,8 +201,8 @@ This analyzes your codebase and creates:
 ```
 
 This command:
-- Updates INITIAL_PHASE2.md, INITIAL_PHASE3.md, etc. with real context
-- Adjusts timelines and scope based on actual implementation
+- Updates PHASE2_REQUIREMENTS.md, PHASE3_REQUIREMENTS.md, etc. with real context
+- Adjusts dependenciess and scope based on actual implementation
 - Creates **PHASE_ADAPTATION_LOG.md** tracking changes made
 - Optimizes future phases based on development velocity
 
@@ -212,7 +212,7 @@ Repeat the cycle for each remaining phase:
 
 ```bash
 # For Phase N:
-/generate-prp INITIAL_PHASE[N].md
+/generate-prp PHASE[N]_REQUIREMENTS.md
 /execute-prp PRPs/[generated-phase-prp].md
 /update-phase-completion [N]
 /update-phase-plans [N]
@@ -223,7 +223,7 @@ Repeat the cycle for each remaining phase:
 ### Core Commands
 
 - **`/plan-project-phases BRD.md Architecture.md`** - Generate optimal phase breakdown
-- **`/generate-prp INITIAL_PHASE[N].md`** - Create implementation PRP for a phase  
+- **`/generate-prp PHASE[N]_REQUIREMENTS.md`** - Create implementation PRP for a phase  
 - **`/execute-prp [prp-file].md`** - Execute phase implementation
 - **`/update-phase-completion [N]`** - Document completed phase automatically
 - **`/update-phase-plans [N]`** - Adapt future phases based on learnings
@@ -235,7 +235,7 @@ Repeat the cycle for each remaining phase:
 /plan-project-phases PLANNING/BRD.md PLANNING/Architecture.md
 
 # Repeat for each phase
-/generate-prp INITIAL_PHASE[N].md
+/generate-prp PHASE[N]_REQUIREMENTS.md
 /execute-prp PRPs/[generated-prp].md  
 /update-phase-completion [N]
 /update-phase-plans [N]
@@ -276,7 +276,7 @@ Repeat the cycle for each remaining phase:
 ### Generated phases seem incorrect
 - Review and enhance your BRD and Architecture documents
 - Ensure documents have clear sections and requirements
-- Consider manual adjustment of generated INITIAL files
+- Consider manual adjustment of generated phase requirements files
 
 ### Integration issues between phases
 - Verify completion summaries have detailed implementation specifics

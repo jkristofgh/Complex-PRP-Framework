@@ -2,7 +2,7 @@
 
 ## Usage: update-phase-plans [PHASE_NUMBER]
 
-Dynamically adapt future phase plans based on actual implementation learnings from completed phases. This command analyzes completion summaries to update remaining INITIAL_PHASE files with real integration points, performance baselines, and adjusted requirements.
+Dynamically adapt future phase plans based on actual implementation learnings from completed phases. This command analyzes completion summaries to update remaining phase requirements files with real integration points, performance baselines, and adjusted requirements.
 
 ## Purpose
 
@@ -23,8 +23,8 @@ This command enables adaptive phase planning by:
 ## Prerequisites Validation
 Before executing this command, validate that:
 - [ ] ../PRP-PLANNING/PRPs/PHASE[N]_COMPLETION_SUMMARY.md exists for the specified phase
-- [ ] templates/prp/TEMPLATE_INITIAL_PHASE.md exists for template updates
-- [ ] Future phase ../PRP-PLANNING/PRPs/INITIAL_PHASE[N+1].md files exist to be updated
+- [ ] templates/prp/TEMPLATE_PHASE_REQUIREMENTS.md exists for template updates
+- [ ] Future phase ../PRP-PLANNING/PRPs/PHASE[N+1]_REQUIREMENTS.md files exist to be updated
 - [ ] ../PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md exists and is writable
 
 ## Analysis & Adaptation Process
@@ -155,7 +155,7 @@ Updated Evolution Plan:
 - Data integrity patterns to maintain
 ```
 
-### 5. INITIAL File Updates
+### 5. Phase Requirements File Updates
 
 #### Update Future Phase Files
 ```bash
@@ -328,8 +328,8 @@ Performance Pattern Evolution:
 ## Output Files Modified
 
 ### Updated Files
-- **INITIAL_PHASE[N+1].md**: Next phase updated with actual context
-- **INITIAL_PHASE[N+2].md**: Subsequent phases updated as needed
+- **PHASE[N+1]_REQUIREMENTS.md**: Next phase updated with actual context
+- **PHASE[N+2]_REQUIREMENTS.md**: Subsequent phases updated as needed
 - **PROJECT_PHASE_PLAN.md**: Master plan synchronized with reality
 - **PHASE_DEPENDENCY_MAP.md**: Dependency map updated with actual patterns
 

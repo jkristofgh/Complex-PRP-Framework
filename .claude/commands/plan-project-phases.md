@@ -2,14 +2,14 @@
 
 ## Usage: plan-project-phases [BRD_FILE] [ARCHITECTURE_FILE]
 
-Systematically analyze Business Requirements Document (BRD) and Architecture document to create optimal phase breakdown and generate all INITIAL_PHASE[N].md files for a Complex Multi-Phase PRP project.
+Systematically analyze Business Requirements Document (BRD) and Architecture document to create optimal phase breakdown and generate all PHASE[N]_REQUIREMENTS.md files for a Complex Multi-Phase PRP project.
 
 ## Purpose
 
 This command transforms ad hoc phase planning into a systematic, data-driven process that:
 - Analyzes project complexity from BRD and architecture documents
 - Applies dependency mapping algorithms to determine optimal phases
-- Creates properly sequenced INITIAL_PHASE files with correct integration context
+- Creates properly sequenced phase requirements files with correct integration context
 - Establishes phase dependencies and integration points upfront
 - Reduces integration risks through systematic planning
 
@@ -24,10 +24,10 @@ This command transforms ad hoc phase planning into a systematic, data-driven pro
 Before executing this command, validate that:
 - [ ] BRD document exists and is readable
 - [ ] Architecture document exists and is readable
-- [ ] PRP-FRAMEWORK/templates/prp/TEMPLATE_INITIAL_PHASE.md exists
-- [ ] PRP-FRAMEWORK/templates/planning/PROJECT_PHASE_PLAN.md exists
-- [ ] PRP-FRAMEWORK/templates/planning/PHASE_DEPENDENCY_MAP.md exists
-- [ ] Write permissions to PRP-PLANNING/PRPs/ directory for file generation
+- [ ] templates/prp/TEMPLATE_PHASE_REQUIREMENTS.md exists
+- [ ] templates/planning/PROJECT_PHASE_PLAN.md exists
+- [ ] templates/planning/PHASE_DEPENDENCY_MAP.md exists
+- [ ] Write permissions to PRPs/ directory for file generation
 
 ## Analysis Process
 
@@ -41,7 +41,7 @@ Before executing this command, validate that:
 - Performance requirements and constraints
 - Integration requirements (APIs, services, external systems)
 - Scope boundaries and non-functional requirements
-- Timeline constraints and delivery expectations
+- Delivery scope and expectations
 ```
 
 #### Architecture Analysis  
@@ -96,28 +96,6 @@ Optimization Components (Depend on working system):
 
 ### 3. Phase Optimization Algorithm
 
-#### Phase Sizing Strategy
-```bash
-# Apply optimal phase sizing based on project characteristics
-
-Small Phases (1-2 weeks) - Use when:
-- High technical risk or new technologies
-- Complex integration requirements
-- Tight performance constraints
-- Team unfamiliar with technology stack
-
-Medium Phases (2-4 weeks) - Use when:
-- Balanced complexity and risk
-- Standard technology stack
-- Well-understood integration patterns
-- Experienced development team
-
-Large Phases (1-2 months) - Use when:
-- Low technical risk
-- Familiar technology stack
-- Independent component development
-- Experienced team with good practices
-```
 
 #### Dependency-Driven Sequencing
 ```bash
@@ -152,13 +130,13 @@ Phase N APIs for Phase N+1:
 - Design backup and recovery strategy
 ```
 
-### 5. INITIAL File Generation
+### 5. Phase Requirements File Generation
 
 #### Create Phase Files
 ```bash
-# Generate INITIAL_PHASE[N].md files for each planned phase
+# Generate PHASE[N]_REQUIREMENTS.md files for each planned phase
 For each phase 1 through N:
-- Copy PRP-FRAMEWORK/templates/prp/TEMPLATE_INITIAL_PHASE.md to PRP-PLANNING/PRPs/INITIAL_PHASE[N].md
+- Copy templates/prp/TEMPLATE_PHASE_REQUIREMENTS.md to ../PRP-PLANNING/PRPs/PHASE[N]_REQUIREMENTS.md
 - Populate phase-specific information
 - Add dependencies from previous phases
 - Define integration requirements for next phases
@@ -182,7 +160,7 @@ For each phase 1 through N:
 ## Project Overview
 - Business objectives from BRD
 - Technical approach from Architecture
-- Overall timeline and milestones
+- Overall project milestones
 
 ## Phase Breakdown Summary
 Phase 1: [Name] - [Scope] - [Dependencies: None]
@@ -193,7 +171,7 @@ Phase 3: [Name] - [Scope] - [Dependencies: Phase 1, 2]
 ## Dependency Map
 [Visual representation of phase dependencies]
 
-## Integration Timeline
+## Integration Points
 [Critical integration points and their phases]
 
 ## Risk Assessment
@@ -219,7 +197,7 @@ Phase 3: [Name] - [Scope] - [Dependencies: Phase 1, 2]
 ```bash
 # Ensure all deliverables are created
 - PROJECT_PHASE_PLAN.md exists and is complete
-- All INITIAL_PHASE[N].md files are created
+- All PHASE[N]_REQUIREMENTS.md files are created
 - PHASE_DEPENDENCY_MAP.md is created
 - Cross-references between files are correct
 - All success criteria are measurable
@@ -278,9 +256,9 @@ Phase 4: Scaling + Enterprise features
 
 ### Primary Outputs
 - **PROJECT_PHASE_PLAN.md**: Master phase planning document
-- **INITIAL_PHASE1.md**: First phase detailed requirements
-- **INITIAL_PHASE2.md**: Second phase detailed requirements  
-- **INITIAL_PHASE[N].md**: Subsequent phase files as needed
+- **PHASE1_REQUIREMENTS.md**: First phase detailed requirements
+- **PHASE2_REQUIREMENTS.md**: Second phase detailed requirements  
+- **PHASE[N]_REQUIREMENTS.md**: Subsequent phase files as needed
 - **PHASE_DEPENDENCY_MAP.md**: Visual dependency mapping
 
 ### Supporting Documents
@@ -299,7 +277,7 @@ Phase 4: Scaling + Enterprise features
 
 ### Phase Quality
 - [ ] Each phase has clear, measurable objectives
-- [ ] Phase scope is appropriate for timeline
+- [ ] Phase scope is appropriate for complexity
 - [ ] Integration requirements are well-defined
 - [ ] Success criteria are specific and testable
 - [ ] Risk mitigation strategies are included
@@ -325,7 +303,7 @@ Phase 4: Scaling + Enterprise features
 
 ### Step 3: File Generation
 - Generate PROJECT_PHASE_PLAN.md with overview
-- Create all INITIAL_PHASE[N].md files
+- Create all PHASE[N]_REQUIREMENTS.md files
 - Generate dependency mapping document
 - Create integration planning documents
 
@@ -341,17 +319,17 @@ This command becomes **Step 0** in the enhanced Complex PRP workflow:
 
 **Step 0**: `/plan-project-phases [BRD] [ARCHITECTURE]` - Generate systematic phase plan  
 **Step 1.1**: Skip manual phase planning - use generated files  
-**Step 1.2**: Use generated INITIAL_PHASE1.md directly  
-**Step 1.3**: Execute `/generate-prp INITIAL_PHASE1.md`  
+**Step 1.2**: Use generated PHASE1_REQUIREMENTS.md directly  
+**Step 1.3**: Execute `/generate-prp PHASE1_REQUIREMENTS.md`  
 **Step 1.4**: Execute `/update-phase-completion 1`  
-**Step N.1**: Use pre-generated INITIAL_PHASE[N].md files  
+**Step N.1**: Use pre-generated PHASE[N]_REQUIREMENTS.md files  
 
 ## Success Metrics
 
 A successful phase plan should achieve:
 - **Comprehensive Coverage**: All BRD requirements addressed across phases
 - **Optimal Dependencies**: Phases properly sequenced with minimal cross-dependencies  
-- **Realistic Scope**: Each phase appropriately sized for complexity and timeline
+- **Realistic Scope**: Each phase appropriately sized for complexity and dependencies
 - **Clear Integration**: Integration points well-defined with concrete examples
 - **Risk Mitigation**: High-risk areas identified with mitigation strategies
 - **Measurable Success**: Each phase has specific, testable success criteria

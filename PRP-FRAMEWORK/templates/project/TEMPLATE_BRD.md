@@ -289,7 +289,7 @@ Example: "A [type of application] that [main functionality] for [target users] t
 ### Business Risks
 
 * [Market risk] - [user adoption or competitive concerns]
-* [Resource risk] - [team capacity or timeline concerns]
+* [Resource risk] - [team capacity or skill concerns]
 * [Strategic risk] - [alignment with business strategy]
 
 ### Mitigation Strategies
@@ -300,11 +300,9 @@ Example: "A [type of application] that [main functionality] for [target users] t
 
 ---
 
-## Project Timeline & Phases
+## Project Team & Resources
 
 **Team Size:** [number of people and roles needed]
-
-**Target Timeline:** [overall project duration]
 
 ### Suggested Phase Breakdown
 
@@ -396,7 +394,7 @@ If this project qualifies for the Complex Multi-Phase PRP framework (multiple co
 
 This command will analyze the business requirements and technical architecture to:
 - Generate optimal phase breakdown based on dependency analysis
-- Create all INITIAL_PHASE[N].md files with proper sequencing
+- Create all PHASE[N]_REQUIREMENTS.md files with proper sequencing
 - Establish integration points and performance baselines across phases
 - Generate PROJECT_PHASE_PLAN.md master planning document
 

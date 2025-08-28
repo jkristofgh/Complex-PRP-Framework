@@ -37,7 +37,7 @@ python tools/project-generator.py --name ProjectName --type web-application
 
 # Core workflow commands (available in generated projects)
 /plan-project-phases BRD.md Architecture.md    # Generate optimal phase plan
-/generate-prp INITIAL_PHASE[N].md               # Create implementation PRP
+/generate-prp PHASE[N]_REQUIREMENTS.md               # Create implementation PRP
 /execute-prp [generated-prp].md                 # Execute phase implementation
 /update-phase-completion [N]                    # Document completed phase
 /update-phase-plans [N]                         # Adapt future phases

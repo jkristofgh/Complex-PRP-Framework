@@ -36,7 +36,7 @@ cp templates/project/TEMPLATE_CLAUDE_*.md ../PRP-PLANNING/PLANNING/
 ### Step 4: Execute Your First Phase
 ```bash
 # Generate implementation PRP (from repository root directory)
-/generate-prp PRP-PLANNING/PRPs/INITIAL_PHASE1.md
+/generate-prp PRP-PLANNING/PRPs/PHASE1_REQUIREMENTS.md
 
 # Execute the phase (creates code in src/)
 /execute-prp PRP-PLANNING/PRPs/[generated-prp-file].md
@@ -68,7 +68,7 @@ PRP-PLANNING/
 │   └── CLAUDE_*.md           # Your Claude Code guidelines
 ├── PRPs/                      # GENERATED FILES
 │   ├── PROJECT_PHASE_PLAN.md # Generated master plan
-│   ├── INITIAL_PHASE1.md     # Generated phase files
+│   ├── PHASE1_REQUIREMENTS.md     # Generated phase files
 │   └── [other generated files]
 └── TASK.md                    # Project task tracking
 ```
@@ -108,7 +108,7 @@ src/
 /plan-project-phases PRP-PLANNING/PLANNING/BRD_YourProject.md PRP-PLANNING/PLANNING/Architecture_YourProject.md
 
 # Repeat for each phase (run from repository root)
-/generate-prp PRP-PLANNING/PRPs/INITIAL_PHASE[N].md
+/generate-prp PRP-PLANNING/PRPs/PHASE[N]_REQUIREMENTS.md
 /execute-prp PRP-PLANNING/PRPs/[generated-prp].md
 /update-phase-completion [N]
 /update-phase-plans [N]

@@ -44,9 +44,9 @@ cp templates/project/TEMPLATE_CLAUDE_*.md ../PRP-PLANNING/PLANNING/
 /plan-project-phases ../PRP-PLANNING/PLANNING/BRD_YourProject.md ../PRP-PLANNING/PLANNING/Architecture_YourProject.md
 
 # This creates:
-# ✅ ../PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md - Master phase plan with timeline
+# ✅ ../PRP-PLANNING/PRPs/PROJECT_PHASE_PLAN.md - Master phase plan with dependencies
 # ✅ ../PRP-PLANNING/PRPs/PHASE_DEPENDENCY_MAP.md - Visual dependency analysis  
-# ✅ ../PRP-PLANNING/PRPs/INITIAL_PHASE1.md, INITIAL_PHASE2.md, etc. - All phase files
+# ✅ ../PRP-PLANNING/PRPs/PHASE1_REQUIREMENTS.md, PHASE2_REQUIREMENTS.md, etc. - All phase files
 # ✅ Optimal sequencing based on requirements analysis
 ```
 
@@ -56,7 +56,7 @@ cp templates/project/TEMPLATE_CLAUDE_*.md ../PRP-PLANNING/PLANNING/
 # For each phase (1, 2, 3, ...) - run from PRP-FRAMEWORK directory:
 
 # Generate comprehensive implementation PRP
-/generate-prp ../PRP-PLANNING/PRPs/INITIAL_PHASE[N].md
+/generate-prp ../PRP-PLANNING/PRPs/PHASE[N]_REQUIREMENTS.md
 
 # Execute the phase implementation (creates code in ../src/)
 /execute-prp ../PRP-PLANNING/PRPs/[generated-prp-file].md
@@ -117,7 +117,7 @@ Complex-PRP-Framework/                    # Main repository
 │   │   └── CLAUDE_*.md                  # Claude Code guidelines
 │   ├── PRPs/                            # Generated planning files
 │   │   ├── PROJECT_PHASE_PLAN.md        # Master phase plan
-│   │   └── INITIAL_PHASE[N].md          # Individual phase files
+│   │   └── PHASE[N]_REQUIREMENTS.md    # Individual phase files
 │   └── TASK.md                          # Project task tracking
 ├── src/                                  # Your actual source code
 │   ├── CLAUDE.md                        # Main project guidance (auto-copied)
@@ -158,12 +158,9 @@ Complex-PRP-Framework/                    # Main repository
 
 ## 📚 Documentation
 
-- **[Getting Started Guide](docs/getting-started.md)** - Complete setup and first project
-- **[Systematic Planning](docs/systematic-planning.md)** - BRD/Architecture integration methodology
-- **[Template Customization](docs/template-customization.md)** - Adapting templates for your needs
-- **[Best Practices](docs/best-practices.md)** - Framework optimization techniques
-- **[Troubleshooting](docs/troubleshooting.md)** - Common issues and solutions
-- **[API Reference](docs/api-reference.md)** - Command and template reference
+- **[Getting Started Guide](PRP-FRAMEWORK/docs/getting-started.md)** - Complete setup and first project
+- **[Framework Guide](PRP-FRAMEWORK/FRAMEWORK_GUIDE.md)** - Complete methodology documentation
+- **[Quick Start Guide](PRP-FRAMEWORK/QUICK_START.md)** - 5-minute setup guide
 
 ## 🤝 Contributing
 

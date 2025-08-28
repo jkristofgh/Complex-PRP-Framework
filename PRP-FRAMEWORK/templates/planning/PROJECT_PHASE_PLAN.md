@@ -38,7 +38,7 @@
 
 ### Phase Overview with Template Assignments
 ```
-Phase 1: [Phase Name] - [Duration Estimate] - Template: prp_base.md
+Phase 1: [Phase Name] - Template: prp_base.md
 ├── [Key Component 1]
 ├── [Key Component 2] 
 ├── [Key Component 3]
@@ -46,7 +46,7 @@ Phase 1: [Phase Name] - [Duration Estimate] - Template: prp_base.md
 ├── Complexity: [low | medium | high]
 └── Dependencies: None (Foundation phase)
 
-Phase 2: [Phase Name] - [Duration Estimate] - Template: prp_base.md
+Phase 2: [Phase Name] - Template: prp_base.md
 ├── [Key Component 1]
 ├── [Key Component 2]
 ├── [Key Component 3]
@@ -54,7 +54,7 @@ Phase 2: [Phase Name] - [Duration Estimate] - Template: prp_base.md
 ├── Complexity: [low | medium | high]
 └── Dependencies: Phase 1 ([specific dependencies])
 
-Phase 3: [Phase Name] - [Duration Estimate] - Template: prp_base.md
+Phase 3: [Phase Name] - Template: prp_base.md
 ├── [Key Component 1]
 ├── [Key Component 2]
 ├── [Key Component 3]
@@ -62,7 +62,7 @@ Phase 3: [Phase Name] - [Duration Estimate] - Template: prp_base.md
 ├── Complexity: [low | medium | high]
 └── Dependencies: Phase 1, 2 ([specific dependencies])
 
-Phase N: [Phase Name] - [Duration Estimate] - Template: prp_base.md
+Phase N: [Phase Name] - Template: prp_base.md
 ├── [Key Component 1]
 ├── [Key Component 2]
 ├── [Key Component 3]
@@ -186,34 +186,6 @@ Business Criteria:
 
 ### [Continue for all phases...]
 
-## ⏰ Timeline & Milestones
-
-### Master Timeline
-```
-Project Start: [Date]
-
-Phase 1: [Start Date] - [End Date] ([Duration])
-├── Milestone 1.1: [Date] - [Deliverable]
-├── Milestone 1.2: [Date] - [Deliverable]
-└── Phase 1 Complete: [Date] - [Completion criteria]
-
-Phase 2: [Start Date] - [End Date] ([Duration])
-├── Milestone 2.1: [Date] - [Deliverable]
-├── Milestone 2.2: [Date] - [Deliverable]
-└── Phase 2 Complete: [Date] - [Completion criteria]
-
-[Continue for all phases...]
-
-Project Complete: [Date] - [Final deliverables]
-```
-
-### Critical Milestones
-```markdown
-[Key project milestones that affect multiple phases]
-- [Milestone 1]: [Date] - [Significance]
-- [Milestone 2]: [Date] - [Significance]
-- [Go-Live Milestone]: [Date] - [Production deployment]
-```
 
 ## 🎯 Performance Evolution Plan
 
@@ -351,14 +323,14 @@ Learning Integration:
 ## 📋 Deliverables Checklist
 
 ### Phase 1 Deliverables
-- [ ] INITIAL_PHASE1.md (generated)
+- [ ] PHASE1_REQUIREMENTS.md (generated)
 - [ ] [Generated Phase 1 PRP file]
 - [ ] [Phase 1 implementation code]
 - [ ] PHASE1_COMPLETION_SUMMARY.md
 - [ ] [Updated phase plans based on Phase 1 learnings]
 
 ### Phase 2 Deliverables
-- [ ] Updated INITIAL_PHASE2.md
+- [ ] Updated PHASE2_REQUIREMENTS.md
 - [ ] [Generated Phase 2 PRP file]
 - [ ] [Phase 2 implementation code]
 - [ ] PHASE2_COMPLETION_SUMMARY.md

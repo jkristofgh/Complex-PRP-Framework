@@ -41,7 +41,7 @@ Example: "[Project Name] is a [type of system] designed to [primary purpose] wit
 
 **Full Architecture Scope:** [Describe the complete architectural vision]
 - [List components and technologies in full implementation]
-- [Estimated complexity and resource requirements]
+- [Complexity analysis and resource requirements]
 
 **Simplified Architecture Option:** [Describe a lighter-weight approach]
 - [How simplified approach still meets all critical requirements]  
@@ -574,7 +574,7 @@ This architecture document serves as input to the Complex Multi-Phase PRP framew
 
 This command analyzes the architecture complexity and business requirements to:
 - Generate optimal phase breakdown based on component dependencies
-- Create properly sequenced INITIAL_PHASE[N].md files
+- Create properly sequenced PHASE[N]_REQUIREMENTS.md files
 - Establish technical integration points and performance baselines
 - Generate technical implementation roadmap across phases
 
